@@ -1,0 +1,2 @@
+APP_URL=https://stirring-fenglisu-7af89d.netlify.app/
+MAP_SERVICE_API_KEY=<api_key>

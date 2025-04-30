@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="/images/logo.png" />
+    <meta name="theme-color" content="#6200ea" />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <title>App</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script type="module" src="/scripts/index.js"></script>
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <header>
+      <div class="main-header container">
+        <a class="brand-name" href="#/">App</a>
+        <div id="notification-buttons-container">
+          <button id="subscribe-btn">Subscribe</button>
+          <button id="unsubscribe-btn" style="display: none">
+            Unsubscribe
+          </button>
+        </div>
+
+        <nav id="navigation-drawer" class="navigation-drawer">
+          <ul id="nav-list" class="nav-list">
+            <li><a href="#/login">Login</a></li>
+            <li><a href="#/register">Register</a></li>
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/story">Saved Story</a></li>
+          </ul>
+        </nav>
+        <button id="drawer-button" class="drawer-button">☰</button>
+      </div>
+    </header>
+    <main id="main-content" class="main-content" tabindex="0"></main>
+  </body>
+</html>
