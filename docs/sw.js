@@ -1,11 +1,11 @@
 const CACHE_NAME = 'story-app-cache-v1';
 const urlsToCache = [
-    '/',
+    './',
     'index.html',
-    '/scripts/index.js',
-    '/scripts/pages/story/storyPage.js',
-    '/scripts/presenters/storyPresenter.js',
-    '/scripts/utils/indexedDB.js',
+    'scripts/index.js',
+    'scripts/pages/story/storyPage.js',
+    'scripts/presenters/storyPresenter.js',
+    'scripts/utils/indexedDB.js',
     'styles/main.css'
 ];
 
