@@ -8,6 +8,35 @@ const urlsToCache = [
     '/scripts/utils/indexedDB.js',
     '/styles/main.css'
 ];
+import { registerRoute } from 'workbox-routing';
+import { StaleWhileRevalidate, CacheFirst } from 'workbox-strategies';
+import { CacheableResponsePlugin } from 'workbox-cacheable-response';
+import { ExpirationPlugin } from 'workbox-expiration';
+
+registerRoute(
+  ({ url }) => url.pathname.startsWith('https://story-api.dicoding.dev/v1/stories'),
+  new StaleWhileRevalidate({
+    cacheName: 'api-stories-cache',
+    plugins: [
+      new CacheableResponsePlugin({ statuses: [0, 200] }),
+    ],
+  })
+);
+
+registerRoute(
+  ({ request }) => request.destination === 'image',
+  new CacheFirst({
+    cacheName: 'story-images-cache',
+    plugins: [
+      new CacheableResponsePlugin({ statuses: [0, 200] }),
+      new ExpirationPlugin({
+        maxEntries: 50,
+        maxAgeSeconds: 7 * 24 * 60 * 60, 
+      }),
+    ],
+  })
+);
+
 
 self.addEventListener('install', event => {
     event.waitUntil(

@@ -1,2 +1,2 @@
-APP_URL=https://stirring-fenglisu-7af89d.netlify.app/
+APP_URL=https://al1en131.github.io/storyapp/
 MAP_SERVICE_API_KEY=<api_key>
