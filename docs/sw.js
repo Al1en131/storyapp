@@ -27,7 +27,7 @@ if (!self.define) {
     s[r] = Promise.all(n.map((e) => d[e] || c(e))).then((e) => (t(...e), o));
   };
 }
-define(["./workbox-7e6ebd6d"], function (e) {
+define(["workbox-7e6ebd6d"], function (e) {
   "use strict";
   self.skipWaiting(),
     e.clientsClaim(),
