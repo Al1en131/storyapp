@@ -855,7 +855,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   let e;
   if ("serviceWorker" in navigator && "PushManager" in window)
     try {
-      (e = await navigator.serviceWorker.register("/sw.js")),
+      (e = await navigator.serviceWorker.register("sw.js")),
         console.log("Service Worker terdaftar:", e),
         await N(e);
     } catch (n) {
