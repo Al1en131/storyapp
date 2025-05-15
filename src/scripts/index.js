@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   let registration;
   if ("serviceWorker" in navigator && "PushManager" in window) {
     try {
-      registration = await navigator.serviceWorker.register("/sw.js");
+      registration = await navigator.serviceWorker.register("sw.js");
       console.log("Service Worker terdaftar:", registration);
       await setupPushButtons(registration);
     } catch (err) {

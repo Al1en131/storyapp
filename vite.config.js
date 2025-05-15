@@ -17,6 +17,10 @@ export default defineConfig({
   plugins: [
     VitePWA({
       registerType: "autoUpdate",
+      injectRegister: "auto",
+      strategies: "injectManifest",
+      srcDir: ".", // lokasi folder service worker kustom
+      filename: "sw.js", // nama file service worker kustom
       includeAssets: [
         "favicon.svg",
         "favicon.ico",

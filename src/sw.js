@@ -12,6 +12,9 @@ import { registerRoute } from 'workbox-routing';
 import { StaleWhileRevalidate, CacheFirst } from 'workbox-strategies';
 import { CacheableResponsePlugin } from 'workbox-cacheable-response';
 import { ExpirationPlugin } from 'workbox-expiration';
+import { precacheAndRoute } from 'workbox-precaching';
+
+precacheAndRoute(self.__WB_MANIFEST);
 
 registerRoute(
   ({ url }) => url.pathname.startsWith('https://story-api.dicoding.dev/v1/stories'),
